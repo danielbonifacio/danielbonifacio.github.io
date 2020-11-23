@@ -1,0 +1,17 @@
+@media screen and (max-width: 647px) {
+    body {
+        background-image: none;
+    }
+    .container {
+        padding: 0 16px;
+        flex-direction: column;
+    }
+    
+    .me {
+        width: 100%;
+    }
+    
+    main {
+        min-height: 450px;
+    }
+}
