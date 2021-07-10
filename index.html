@@ -1,77 +1,624 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/index.css">
-    
-    <!-- Primary Meta Tags -->
-    <title>Daniel Bonifacio — Especialista em front-end</title>
-    <meta name="title" content="Daniel Bonifacio — Especialista em front-end">
-    <meta name="description" content="Me chamo Daniel Bonifacio, sou especialista em front-end. Ministrei 2 cursos e disponibilizei diversas aulas livres até o momento, sobre React.js, Vue.js e Node.js. Caso queira me conhecer melhor, basta me chamar.">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://danielbonifacio.com.br/">
-    <meta property="og:title" content="Daniel Bonifacio — Especialista em front-end">
-    <meta property="og:description" content="Me chamo Daniel Bonifacio, sou especialista em front-end. Ministrei 2 cursos e disponibilizei diversas aulas livres até o momento, sobre React.js, Vue.js e Node.js. Caso queira me conhecer melhor, basta me chamar.">
-    <meta property="og:image" content="/assets/og.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://danielbonifacio.com.br/">
-    <meta property="twitter:title" content="Daniel Bonifacio — Especialista em front-end">
-    <meta property="twitter:description" content="Me chamo Daniel Bonifacio, sou especialista em front-end. Ministrei 2 cursos e disponibilizei diversas aulas livres até o momento, sobre React.js, Vue.js e Node.js. Caso queira me conhecer melhor, basta me chamar.">
-    <meta property="twitter:image" content="/assets/og.png">
-</head>
-<body>
-    <div class="container">
-        <img
-            class="me"
-            src="./assets/me.png"
-            alt="Daniel Bonifacio - Desenvolvedor Front-end no Espírito Santo"
-        >
-        <main>
-            <div class="upper-content">
-                <h1 class="heading">
-                    Daniel <strong>Bonifacio</strong>
-                </h1>
-    
-                <p class="bio">
-                    Instrutor de Front-end na
-                        <span>
-                            <a href="https://algaworks.com" target="_blank">algaworks</a>
-                        </span>
-                    e
-                        <strike>consultor de desenvolvimento de software na <a href="https://cyberlabs.ai" target="_blank">cyberlabs</a></strike>.
-                </p>
-            </div>
-            <div class="lower-content">
-                <ul class="social-media">
-                    <li>
-                        <a href="https://linkedin.com/in/danielbonifaciocombr" target="_blank">
-                            <img src="./assets/icons/linkedin.svg" alt="ícone linkedin">
-                            perfil no linkedin
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://facebook.com/danielbonifaciocombr" target="_blank">
-                            <img src="./assets/icons/facebook.svg" alt="ícone facebook">
-                            perfil no facebook
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://facebook.com/danielbnfc" target="_blank">
-                            <img src="./assets/icons/facebook.svg" alt="ícone facebook">
-                            página no facebook
-                        </a>
-                    </li>
-                </ul>
-                <p class="where-am-i">
-                    Eu moro em Vila Velha, Espírito Santo, mas com essa pandemia não estou agendando nenhuma reunião presencial. Vamos conversar no Zoom! =)
-                </p>
-            </div>
-        </main>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Daniel Bonifacio é um desenvolvedor especialista que vive em vila velha, no Espírito Santo" />
+    <meta name="keywords" content="daniel bonifacio, desenvolvedor em vila velha, vila velha es, dev em vila velha, dev es, daniel" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Daniel Bonifacio - Desenvolvedor Web Especialista em Vila Velha</title>
+    <link href="css/main.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#454851">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#454851">
+    <style>
+      @keyframes animate-circle {
+        from {
+          transform: scale(0);
+          opacity: 1;
+        }
+        to {
+          transform: scale(1);
+          opacity: 0;
+        }
+      }
+      #preloader {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background: #454851;
+        background: linear-gradient(
+          to right,
+          rgba(69, 72, 81) 0%,
+          rgba(69, 72, 81) 32%,
+          rgba(52, 66, 83) 100%
+        );
+      }
+      .loader {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        height: 10rem;
+        width: 10rem;
+        transform: translateX(-50%) translateY(-50%);
+      }
+      .loader > .circle {
+        position: absolute;
+        height: inherit;
+        width: inherit;
+        background: #0099ff;
+        border-radius: 0;
+        animation: animate-circle 2s cubic-bezier(0.9, 0.24, 0.62, 0.79)
+          infinite;
+      }
+      .loader > .circle:nth-of-type(1) {
+        animation-delay: 0s;
+      }
+      .loader > .circle:nth-of-type(2) {
+        animation-delay: calc(2s / -3);
+      }
+      .loader > .circle:nth-of-type(3) {
+        animation-delay: calc(2s / -6);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="preloader">
+      <div class="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
     </div>
-</body>
+    
+    <main class="main main--home" style="opacity: 0">
+      <canvas class="noise" id="noise"></canvas>
+      <div class="header">
+        <div class="header__left">
+          <div class="header__letter">:)</div>
+          <div class="header__socials">
+            <a href="" target="_blank">
+              <svg>
+                <use xlink:href="./svg/sprite.svg#fb"></use></svg></a
+            ><a href="" target="_blank">
+              <svg>
+                <use xlink:href="./svg/sprite.svg#tw"></use></svg></a
+            ><a href="" target="_blank">
+              <svg>
+                <use xlink:href="./svg/sprite.svg#in"></use></svg
+            ></a>
+          </div>
+        </div>
+        <div class="header__right">
+          <ul class="header__menu">
+            <li class="active">
+              <a class="js-scroll-link" href="javascript:;" data-link="0"
+                >Introdução</a
+              >
+            </li>
+            <li>
+              <a class="js-scroll-link" href="javascript:;" data-link="1"
+                >Projetos</a
+              >
+            </li>
+            <li>
+              <a class="js-scroll-link" href="javascript:;" data-link="2"
+                >Cursos</a
+              >
+            </li>
+            <li>
+              <a class="js-scroll-link" href="javascript:;" data-link="3"
+                >Depoimentos</a
+              >
+            </li>
+            <li>
+              <a class="js-scroll-link" href="javascript:;" data-link="4"
+                >Experiência</a
+              >
+            </li>
+          </ul>
+          <div class="header__phone">
+            <a href="tel:+5527999379775">+55 (27) 99937-9775</a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll">
+        <div class="home-page">
+          <div class="page-title show">
+            <ul>
+              <li>
+                <div class="title">Introdução</div>
+                <div class="number">1.0</div>
+              </li>
+              <li>
+                <div class="title">Projetos</div>
+                <div class="number">2.0</div>
+              </li>
+              <li>
+                <div class="title">Cursos</div>
+                <div class="number">3.0</div>
+              </li>
+              <li>
+                <div class="title">Depoimentos</div>
+                <div class="number">4.0</div>
+              </li>
+              <li>
+                <div class="title">Experiência</div>
+                <div class="number">5.0</div>
+              </li>
+            </ul>
+          </div>
+          <div class="scrollable">
+            <section class="home">
+              <div class="sticky-title">
+                <ul>
+                  <li>
+                    <div>Eu sou o Bonifacio</div>
+                    <div>1.0</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content">
+                <div class="content__left">
+                  <div class="content__title">
+                    <div class="h1">Daniel</div>
+                    <div class="h1 strong">Bonifacio</div>
+                  </div>
+                  <div class="content__description">
+                    <div class="small">
+                      Olá! Me chamo Daniel Bonifacio, e sou apaixonado por desenvolvimento. <br> <br>
+                      Possuo mais de <strong>oito anos</strong> de experiência na área de programação. <br> <br>
+                      Atualmente, tenho mais de 500 alunos e presto consultoria para algumas empresas.
+                    </div>
+                  </div>
+                  <div class="content__btn-block">
+                    <div class="content__btn-label small">entre em contato comigo :)</div>
+                    <a
+                      class="content__btn-btn btn btn--arrow js-scroll-link"
+                      href="#hireme"
+                      data-link="6"
+                    >
+                      <svg>
+                        <use xlink:href="./svg/sprite.svg#arrow"></use></svg
+                    ></a>
+                  </div>
+                  <div class="home__numbers">
+                    <div class="home__number">
+                      <div class="home__number-digital" data-number="8">8</div>
+                      <div class="home__number-text small">
+                        Anos de experiência
+                      </div>
+                    </div>
+                    <div class="home__number">
+                      +<div class="home__number-digital" data-number="550">
+                        550
+                      </div>
+                      <div class="home__number-text small">
+                        Alunos <br />satisfeitos
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="content__right">
+                  <div class="home__circles">
+                    <div class="home__circles-lines"></div>
+                    <div class="home__circle home__circle--left">
+                      <img
+                        class="home__circle-img"
+                        src="img/daniel_bonifacio.jpeg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="home__circle home__circle--right">
+                      <div class="home__circle-text">
+                        tecnologia++; <br>
+                        educação++; <br>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="scrollable">
+            <section class="projects">
+              <div class="sticky-title">
+                <ul>
+                  <li>
+                    <div>Projetos</div>
+                    <div>2.0</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content">
+                <div class="content__left">
+                  <div class="content__title">
+                    <div class="h1">Projetos</div>
+                  </div>
+                  <ul class="content__menu projects__menu">
+                    <li class="active">
+                      <a href="javascript:;">AlgaNews - Curso</a>
+                    </li>
+                    <li class="active">
+                      <a href="javascript:;">AlgaNews Admin - Curso</a>
+                    </li>
+                    <li class="active">
+                      <a href="javascript:;">AlgaNews CMS - Curso</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">Mentoria Dev - Mentoria</a>
+                    </li>
+                    <li>
+                      <a href="https://tompero.digital" target="_blank">Tompero - Minha agência :)</a>
+                    </li>
+                  </ul>
+                  <div class="content__btn-block">
+                    <div class="content__btn-label small">ver todos os meus trabalhos</div>
+                    <a
+                      class="content__btn-btn btn btn--arrow"
+                      href="https://www.github.com/danielbonifacio"
+                      target="_blank"
+                      rel="nofollow"
+                    >
+                      <svg>
+                        <use xlink:href="./svg/sprite.svg#arrow"></use></svg
+                    ></a>
+                  </div>
+                </div>
+                <div class="content__right">
+                  <div class="projects__blocks">
+                    <div class="projects__block active">
+                      <a rel="nofollow"
+                        ><img src="img/alganews.png" alt=""
+                      /></a>
+                    </div>
+                    <div class="projects__block active">
+                      <a rel="nofollow"
+                        ><img src="img/admin_alganews.png" alt=""
+                      /></a>
+                    </div>
+                    <div class="projects__block active">
+                      <a href="#" target="_blank" rel="nofollow"
+                        ><img src="img/cms_alganews.png" alt=""
+                      /></a>
+                    </div>
+                    <div class="projects__block active">
+                      <a href="#" target="_blank" rel="nofollow"
+                        ><img src="img/mentoria_bonifacio_dev.png" alt=""
+                      /></a>
+                    </div>
+                    <div class="projects__block active">
+                      <a href="#" target="_blank" rel="nofollow"
+                        ><img src="img/tompero.png" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="scrollable">
+            <section class="awards">
+              <div class="sticky-title">
+                <ul>
+                  <li>
+                    <div>Cursos</div>
+                    <div>3.0</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content">
+                <div class="content__left">
+                  <div class="content__title">
+                    <div class="h1">Explore</div>
+                    <div class="h1">os meus</div>
+                    <div class="h1 strong">cursos</div>
+                  </div>
+                  <div class="content__description">
+                    <div class="small">
+                      Eu possuo alguns cursos online, publicados pela AlgaWorks. <br>
+                      Conheça-os.
+                    </div>
+                  </div>
+                  <div class="content__btn-block">
+                    <div class="content__btn-label small">Ver meu LinkedIn</div>
+                    <a
+                      class="content__btn-btn btn btn--arrow"
+                      target="blank"
+                      rel="norefer noopener"
+                      href="https://linkedin.com/in/danielbonifaciocombr"
+                    >
+                      <svg>
+                        <use xlink:href="./svg/sprite.svg#arrow"></use></svg
+                    ></a>
+                  </div>
+                </div>
+                <div class="content__right">
+                  <!-- <div class="content__subtitle">
+                    Meus <span>&lt;3</span>
+                  </div> -->
+                  <div class="content__awards awards__list">
+                    <div class="content__award">
+                      <div class="content__award-img">
+                        <img src="img/react.png" alt="" />
+                      </div>
+                      <div class="content__award-title">
+                        <p>Ignição React</p>
+                      </div>
+                      <div class="content__award-text small">
+                        O curso que vai levar você do zero ao intermediário
+                        com React.js
+                      </div>
+                    </div>
+                    <div class="content__award">
+                      <div class="content__award-img">
+                        <img src="img/mjs.png" alt="" />
+                      </div>
+                      <div class="content__award-title">
+                        <p>Mergulhando no JavaScript</p>
+                      </div>
+                      <div class="content__award-text small">
+                        Aprenda JavaScript moderno (ES6+) juntamente com TypeScrip do jeito certo.
+                      </div>
+                    </div>
+                    <div class="content__award">
+                      <div class="content__award-img">
+                        <img src="img/react.png" alt="" />
+                      </div>
+                      <div class="content__award-title">
+                        <p>Especialista React.js</p>
+                      </div>
+                      <div class="content__award-text small">
+                        O maior e mais completo curso de React em português. 
+                      </div>
+                    </div>
+                    <div class="content__award">
+                      <div class="content__award-img">
+                        <img src="img/youtube.png" alt="" />
+                      </div>
+                      <div class="content__award-title">
+                        <p>Vue.js para iniciantes</p>
+                      </div>
+                      <div class="content__award-text small">
+                        Este foi meu primeiro curso online. Publicado gratuitamente no YouTube.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="scrollable">
+            <section class="testimonials">
+              <div class="sticky-title">
+                <ul>
+                  <li>
+                    <div>Depoimentos</div>
+                    <div>4.0</div>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="content"
+                style="
+                  background-image: url(images/testmonials-bg.jpeg);
+                  background-size: auto 100%;
+                  background-repeat: no-repeat;
+                  background-position: center center;
+                "
+              >
+                <div class="content__left">
+                  <div class="content__title">
+                    <div class="h1">+550</div>
+                    <div class="h1">alunos e</div>
+                    <div class="h1">clientes</div>
+                    <div class="h1 strong">felizes</div>
+                    <div class="small">
+                      <br>
+                      Amo trabalhar com tecnologia e educação
+                    </div>
+                  </div>
+                  <div class="testimonials__clients">
+                    <div class="testimonials__client">
+                      <img src="img/wine.svg" alt="" />
+                    </div>
+                    <div class="testimonials__client">
+                      <img src="img/cyberlabs.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="content__right">
+                  <div class="content__subtitle">
+                    <span>Qualidade</span> é a base do meu trabalho.
+                  </div>
+                  <div class="content__slider slides testimonials__slider">
+                    <div class="slides__container">
+                      <div class="slides__inner">
+                        <div class="slide">
+                          <div class="content__slider-text small">
+                            Profissional altamente capacitado, sem sombra de dúvidas.
+                            Conseguiu resolver problemas fora da caixa dentro da Empresa,
+                            nos possibilitando um grande diferencial no mercado.
+                          </div>
+                          <div class="content__slider-name">CyberLabs</div>
+                          <div class="content__slider-staff small">
+                            Anthony, Diretor de Operações
+                          </div>
+                        </div>
+                        <div class="slide">
+                          <div class="content__slider-text small">
+                            O melhor professor de todos os tempos! Explica de forma
+                            descontraída, sem enrolação. Manda o "papo-reto" mesmo hahaha!
+                            Graças a você, Daniel, Consegui o meu primeiro emprego como
+                            programador, e já entrei em uma vaga Pleno! [...] Muito obrigado!
+                          </div>
+                          <div class="content__slider-name">Mentoria Dev</div>
+                          <div class="content__slider-staff small">
+                            Gabriel Oliveira, Aluno
+                          </div>
+                        </div>
+                        <div class="slide">
+                          <div class="content__slider-text small">
+                            É impressionante como o Daniel conseguiu resolver
+                            tudo de uma forma tão simples e tão rápida aqui na empresa...
+                            [...] parece até que o cara fala em binário.
+                          </div>
+                          <div class="content__slider-name">Wine.com.br</div>
+                          <div class="content__slider-staff small">
+                            Bruno Marinho, Product Manager
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slides__controls">
+                      <button
+                        class="
+                          slides__btn slides__btn--prev
+                          btn btn--invert btn--arrow
+                        "
+                        id="prevButton"
+                      >
+                        <svg>
+                          <use xlink:href="./svg/sprite.svg#arrow"></use>
+                        </svg>
+                      </button>
+                      <button
+                        class="slides__btn slides__btn--next btn btn--arrow"
+                        id="nextButton"
+                      >
+                        <svg>
+                          <use xlink:href="./svg/sprite.svg#arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="scrollable">
+            <section class="experience">
+              <div class="sticky-title">
+                <ul>
+                  <li>
+                    <div>experiência</div>
+                    <div>5.0</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content">
+                <div
+                  class="content__bg"
+                  style="background-image: url(images/testmonials-bg.png)"
+                ></div>
+                <div class="content__left">
+                  <div class="content__title">
+                    <div class="h1">Experiência</div>
+                    <div class="h1">&</div>
+                    <div class="h1">Educação</div>
+                  </div>
+                  <div class="content__description">
+                    <div class="small">
+                      Eu estou no mercado de trabalho de tecnologia
+                      desde os 14 anos. Tive a oportunidade de passar
+                      por empresas de vários tamanhos e perfis.
+                    </div>
+                  </div>
+                  <div class="content__btn-block">
+                    <a
+                      class="content__btn-btn btn"
+                      href="https://linkedin.com/in/danielbonifaciocombr"
+                      target="_blank">LinkedIn</a>
+                  </div>
+                </div>
+                <div class="content__right">
+                  <div class="content__awards experience__list">
+                    <div class="content__award">
+                      <div class="content__award-img">
+                        <img src="img/tompero_logo.png" alt="" />
+                      </div>
+                      <div class="content__award-title">
+                        <span class="small">Sócio-Proprietário</span>
+                        <p>Tompero Digital</p>
+                      </div>
+                      <div class="content__award-text small">
+                        Agência de desenvolvimento digital
+                      </div>
+                    </div>
+                    <div class="content__award">
+                      <div class="content__award-img">
+                        <img src="img/algaworks.png" alt="" />
+                      </div>
+                      <div class="content__award-title">
+                        <span class="small">Especialista & Instrutor</span>
+                        <p>AlgaWorks</p>
+                      </div>
+                      <div class="content__award-text small">
+                        autor de cursos e especialista em front-end
+                      </div>
+                    </div>
+                    <div class="content__award">
+                      <div class="content__award-img">
+                        <img src="img/wine.jpeg" alt="" />
+                      </div>
+                      <div class="content__award-title">
+                        <span class="small">Mobile Engineer</span>
+                        <p>wine.com.br</p>
+                      </div>
+                      <div class="content__award-text small">
+                        refatoração e atualização do aplicativo.
+                      </div>
+                    </div>
+                    <div class="content__award">
+                      <div class="content__award-img">
+                        <img src="img/cyberlabs.jpeg" alt="" />
+                      </div>
+                      <div class="content__award-title">
+                        <span class="small">Consultoria de Software</span>
+                        <p>CyberLabs</p>
+                      </div>
+                      <div class="content__award-text small">
+                        Consultoria e desenvolvimento de software customizado.
+                      </div>
+                    </div>
+                    <div class="content__award">
+                      <div class="content__award-img">
+                        <img src="img/sicoob.jpeg" alt="" />
+                      </div>
+                      <div class="content__award-title">
+                        <span class="small">Engenheiro de Software</span>
+                        <p>Sicoob</p>
+                      </div>
+                      <div class="content__award-text small">
+                        A maioria dos trabalhos focados em desenvolver interfaces
+                        intuitivas com Vue.js
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
 </html>
